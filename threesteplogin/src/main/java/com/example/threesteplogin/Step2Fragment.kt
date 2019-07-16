@@ -11,6 +11,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.Navigation
 
+/**
+ *
+ * Username and Password Fragment
+ *
+ */
 
 class Step2Fragment : Fragment() {
 

@@ -11,6 +11,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
 
+/**
+ *
+ * Recap Fragment
+ *
+ */
 class Step3Fragment : Fragment() {
 
     private lateinit var tvRegistrationComplete:TextView

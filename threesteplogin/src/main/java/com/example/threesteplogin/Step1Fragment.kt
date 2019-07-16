@@ -10,12 +10,22 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.Navigation
 
+/**
+ *
+ *  Form Fragment
+ *
+ */
 class Step1Fragment : Fragment() {
 
     private lateinit var etName:EditText
     private lateinit var etSurname:EditText
     private lateinit var etEmail:EditText
     private lateinit var btnConfirmStep1:Button
+
+    /**
+     * static variable for retrieve bundle arguments when return to this fragment
+     */
+
     companion object{
         @JvmStatic var bundleInstantiated = false
     }
