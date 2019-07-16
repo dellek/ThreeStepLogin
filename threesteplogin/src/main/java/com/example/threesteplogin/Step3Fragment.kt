@@ -21,7 +21,6 @@ class Step3Fragment : Fragment() {
     private lateinit var tvYourPassword:TextView
     private lateinit var btnUndo:Button
     private lateinit var btnConfirmStep3:Button
-    private lateinit var bundle: Bundle
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_step3, container, false)
@@ -36,12 +35,11 @@ class Step3Fragment : Fragment() {
         tvYourUsername = view.findViewById(R.id.tv_your_username)
         tvYourPassword = view.findViewById(R.id.tv_your_password)
         btnUndo = view.findViewById(R.id.btn_undo)
-        bundle = arguments!!
-        tvYourName.text = bundle.getString("name")
-        tvYourSurname.text = bundle.getString("surname")
-        tvYourEmail.text = bundle.getString("email")
-        tvYourUsername.text = bundle.getString("username")
-        tvYourPassword.text = bundle.getString("password")
+        tvYourName.text = arguments?.getString("name")
+        tvYourSurname.text = arguments?.getString("surname")
+        tvYourEmail.text = arguments?.getString("email")
+        tvYourUsername.text = arguments?.getString("username")
+        tvYourPassword.text = arguments?.getString("password")
         btnUndo.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.action_step3_to_step1,Bundle())
         }
