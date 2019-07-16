@@ -15,9 +15,6 @@ class NavigatorHost : AppCompatActivity(){
         setContentView(R.layout.navigator_host)
         nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
-    }
-
-    fun initializeFlux(){
         graph.startDestination = R.id.step1Fragment
     }
 
