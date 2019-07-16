@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.Navigation
 
 class Step3Fragment : Fragment() {
 
@@ -20,6 +21,7 @@ class Step3Fragment : Fragment() {
     private lateinit var tvYourPassword:TextView
     private lateinit var btnUndo:Button
     private lateinit var btnConfirmStep3:Button
+    private lateinit var bundle: Bundle
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_step3, container, false)
@@ -34,18 +36,18 @@ class Step3Fragment : Fragment() {
         tvYourUsername = view.findViewById(R.id.tv_your_username)
         tvYourPassword = view.findViewById(R.id.tv_your_password)
         btnUndo = view.findViewById(R.id.btn_undo)
+        bundle = arguments!!
+        tvYourName.text = bundle.getString("name")
+        tvYourSurname.text = bundle.getString("surname")
+        tvYourEmail.text = bundle.getString("email")
+        tvYourUsername.text = bundle.getString("username")
+        tvYourPassword.text = bundle.getString("password")
+        btnUndo.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_step3_to_step1,Bundle())
+        }
         btnConfirmStep3 = view.findViewById(R.id.btn_confirm_step3)
         btnConfirmStep3.setOnClickListener{
             Toast.makeText(context,"Evviva!!Hai completato i 3 step",Toast.LENGTH_SHORT).show()
         }
     }
-
-//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-//        super.onViewStateRestored(savedInstanceState)
-//        tvYourName.text = savedInstanceState!!.getString("name")
-//        tvYourPassword.text = savedInstanceState!!.getString("surname")
-//        tvYourEmail.text = savedInstanceState!!.getString("email")
-//        tvYourUsername.text = savedInstanceState!!.getString("username")
-//        tvYourPassword.text = savedInstanceState!!.getString("password")
-//    }
 }

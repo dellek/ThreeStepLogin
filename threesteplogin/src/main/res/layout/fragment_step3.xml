@@ -17,10 +17,8 @@
             android:text="@string/registration_complete"
             app:layout_constraintBottom_toTopOf="@+id/tv_your_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/tv_your_name"
@@ -29,10 +27,10 @@
         android:layout_marginStart="35dp"
         android:layout_marginEnd="317dp"
         android:layout_marginBottom="44dp"
+        android:ems="8"
         android:text="@string/your_name"
         app:layout_constraintBottom_toTopOf="@+id/tv_your_surname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -42,10 +40,10 @@
         android:layout_marginStart="35dp"
         android:layout_marginEnd="317dp"
         android:layout_marginBottom="36dp"
+        android:ems="8"
         android:text="@string/your_surname"
         app:layout_constraintBottom_toTopOf="@+id/tv_your_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -55,10 +53,10 @@
         android:layout_marginStart="35dp"
         android:layout_marginEnd="317dp"
         android:layout_marginBottom="32dp"
+        android:ems="8"
         android:text="@string/your_email"
         app:layout_constraintBottom_toTopOf="@+id/tv_your_username"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -71,7 +69,7 @@
         android:text="@string/your_username"
         app:layout_constraintBottom_toTopOf="@+id/tv_your_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -84,7 +82,7 @@
         android:text="@string/your_password"
         app:layout_constraintBottom_toTopOf="@+id/btn_confirm_step3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

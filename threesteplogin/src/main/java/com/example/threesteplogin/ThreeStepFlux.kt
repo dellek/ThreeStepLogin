@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 
-open class NavigatorHost : AppCompatActivity(){
+open class ThreeStepFlux : AppCompatActivity(){
 
     private lateinit var nav:NavHostFragment
     private lateinit var graph:NavGraph

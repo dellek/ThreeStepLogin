@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.Navigation
-import kotlin.system.measureTimeMillis
 
 
 class Step2Fragment : Fragment() {
@@ -19,6 +18,7 @@ class Step2Fragment : Fragment() {
     private lateinit var etPassword:EditText
     private lateinit var btnCancelStep2:Button
     private lateinit var btnConfirmStep2:Button
+    private lateinit var bundle: Bundle
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_step2, container, false)
@@ -29,9 +29,17 @@ class Step2Fragment : Fragment() {
         etUsername = view.findViewById(R.id.et_username)
         etPassword = view.findViewById(R.id.et_password)
         btnCancelStep2 = view.findViewById(R.id.btn_cancel_step2)
+        if(bundle.getBoolean("step2")){
+            bundle = arguments!!
+            etUsername.setText(bundle.getString("username"))
+            etPassword.setText(bundle.getString("password"))
+        }else{
+            bundle = Bundle()
+        }
+
         btnCancelStep2.setOnClickListener{
             if(!etUsername.text.equals("") && !etPassword.text.equals("")){
-                 etUsername.setText("")
+                etUsername.setText("")
                 etPassword.setText("")
             }
             Navigation.findNavController(it).navigate(R.id.action_step2_to_step1)
@@ -41,24 +49,11 @@ class Step2Fragment : Fragment() {
             if(etUsername.text.equals("") && etPassword.text.equals("")){
                 Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
             }else{
-                //onSaveInstanceState(savedInstanceState!!)
-                Navigation.findNavController(it).navigate(R.id.action_step2_to_step3,savedInstanceState)
+                bundle.putBoolean("step2",true)
+                bundle.putString("username",etUsername.text.toString())
+                bundle.putString("password",etPassword.text.toString())
+                Navigation.findNavController(it).navigate(R.id.action_step2_to_step3,bundle)
             }
         }
     }
-
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        outState.putBoolean("step2",true)
-//        outState.putString("username",etUsername.text.toString())
-//        outState.putString("password",etPassword.text.toString())
-//    }
-//
-//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-//        super.onViewStateRestored(savedInstanceState)
-//        if(savedInstanceState!!.getBoolean("step2")){
-//            etUsername.setText(savedInstanceState.getString("username"))
-//            etPassword.setText(savedInstanceState.getString("password"))
-//        }
-//    }
 }
