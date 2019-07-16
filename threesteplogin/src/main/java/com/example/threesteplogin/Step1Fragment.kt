@@ -24,18 +24,16 @@ class Step1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        bundle = Bundle()
         etName = view.findViewById(R.id.et_name)
         etSurname = view.findViewById(R.id.et_surname)
         etEmail = view.findViewById(R.id.et_email)
         btnConfirmStep1 = view.findViewById(R.id.btn_confirm_step1)
-        if(bundle.getBoolean("step1")){
+        if(bundle.getBoolean("step1")) {
             bundle = arguments!!
             etName.setText(bundle.getString("name"))
             etSurname.setText(bundle.getString("surname"))
             etEmail.setText(bundle.getString("email"))
-        }else{
-            bundle = Bundle()
         }
 
         btnConfirmStep1.setOnClickListener{

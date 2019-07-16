@@ -29,12 +29,12 @@ class Step2Fragment : Fragment() {
         etUsername = view.findViewById(R.id.et_username)
         etPassword = view.findViewById(R.id.et_password)
         btnCancelStep2 = view.findViewById(R.id.btn_cancel_step2)
+        bundle = Bundle()
+
         if(bundle.getBoolean("step2")){
             bundle = arguments!!
             etUsername.setText(bundle.getString("username"))
             etPassword.setText(bundle.getString("password"))
-        }else{
-            bundle = Bundle()
         }
 
         btnCancelStep2.setOnClickListener{
