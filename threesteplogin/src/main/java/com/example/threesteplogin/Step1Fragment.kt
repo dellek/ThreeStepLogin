@@ -28,14 +28,12 @@ class Step1Fragment : Fragment() {
         etSurname = view.findViewById(R.id.et_surname)
         etEmail = view.findViewById(R.id.et_email)
         btnConfirmStep1 = view.findViewById(R.id.btn_confirm_step1)
-
-        if(bundle!=null && bundle.getBoolean("step1")) {
+        bundle = Bundle()
+        if(bundle.getBoolean("step1")) {
             bundle = arguments!!
             etName.setText(bundle.getString("name"))
             etSurname.setText(bundle.getString("surname"))
             etEmail.setText(bundle.getString("email"))
-        }else{
-            bundle = Bundle()
         }
 
         btnConfirmStep1.setOnClickListener{
