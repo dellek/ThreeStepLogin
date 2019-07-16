@@ -58,5 +58,17 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_confirm_step2"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/personal"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="530dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel_step2"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"/>
 </android.support.constraint.ConstraintLayout>
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.Navigation
@@ -23,6 +24,7 @@ class Step2Fragment : Fragment() {
     private lateinit var etPassword:EditText
     private lateinit var btnCancelStep2:Button
     private lateinit var btnConfirmStep2:Button
+    private lateinit var checkBox: CheckBox
     companion object{
         @JvmStatic var bundle2Instantiated = false
     }
@@ -36,7 +38,7 @@ class Step2Fragment : Fragment() {
         etUsername = view.findViewById(R.id.et_username)
         etPassword = view.findViewById(R.id.et_password)
         btnCancelStep2 = view.findViewById(R.id.btn_cancel_step2)
-
+        checkBox = view.findViewById(R.id.checkBox)
         if(bundle2Instantiated){
             etUsername.setText(arguments?.getString("username"))
             etPassword.setText(arguments?.getString("password"))
@@ -53,7 +55,7 @@ class Step2Fragment : Fragment() {
         btnConfirmStep2 = view.findViewById(R.id.btn_confirm_step2)
 
         btnConfirmStep2.setOnClickListener{
-            if(etUsername.text.toString() == "" || etPassword.text.toString() == ""){
+            if(etUsername.text.toString() == "" || etPassword.text.toString() == "" || !checkBox.isChecked){
                 Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
             }else{
                 bundle2Instantiated = true

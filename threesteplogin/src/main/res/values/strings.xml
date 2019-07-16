@@ -10,6 +10,7 @@
     <!-- STEP 2 -->
     <string name="username">Choose your username</string>
     <string name="password">Choose a password</string>
+    <string name="personal">Consent to store personal data?</string>
 
     <!-- STEP 3 -->
     <string name="registration_complete">Registration is completed!\n</string>
