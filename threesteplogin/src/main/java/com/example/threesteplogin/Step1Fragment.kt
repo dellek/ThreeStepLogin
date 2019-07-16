@@ -48,7 +48,7 @@ class Step1Fragment : Fragment() {
         }
 
         btnConfirmStep1.setOnClickListener{
-            if(etName.text.toString() == "" && etSurname.text.toString() == "" && etEmail.text.toString() == "") {
+            if(etName.text.toString() == "" || etSurname.text.toString() == "" || etEmail.text.toString() == "") {
                 Toast.makeText(context, "I campi sono obbligatori", Toast.LENGTH_SHORT).show()
             }else{
                 bundleInstantiated = true

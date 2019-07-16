@@ -53,7 +53,7 @@ class Step2Fragment : Fragment() {
         btnConfirmStep2 = view.findViewById(R.id.btn_confirm_step2)
 
         btnConfirmStep2.setOnClickListener{
-            if(etUsername.text.toString() == "" && etPassword.text.toString() == ""){
+            if(etUsername.text.toString() == "" || etPassword.text.toString() == ""){
                 Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
             }else{
                 bundle2Instantiated = true
