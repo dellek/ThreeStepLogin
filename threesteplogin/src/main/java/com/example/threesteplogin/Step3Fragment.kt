@@ -35,11 +35,11 @@ class Step3Fragment : Fragment() {
         tvYourUsername = view.findViewById(R.id.tv_your_username)
         tvYourPassword = view.findViewById(R.id.tv_your_password)
         btnUndo = view.findViewById(R.id.btn_undo)
-        tvYourName.text = R.string.your_name.toString() + arguments?.getString("name")
-        tvYourSurname.text = R.string.your_surname.toString() + arguments?.getString("surname")
-        tvYourEmail.text = R.string.your_email.toString() + arguments?.getString("email")
-        tvYourUsername.text = R.string.your_username.toString() + arguments?.getString("username")
-        tvYourPassword.text = R.string.your_password.toString() + arguments?.getString("password")
+        tvYourName.text = "Your name is: ${arguments?.getString("name")} \n"
+        tvYourSurname.text ="Your surname is: ${arguments?.getString("surname")} \n"
+        tvYourEmail.text = "Your email is: ${arguments?.getString("email")} \n"
+        tvYourUsername.text = "Your username is: ${arguments?.getString("username")} \n"
+        tvYourPassword.text = "Your password is: ${arguments?.getString("password")} \n"
         btnUndo.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.action_step3_to_step1,Bundle())
         }

@@ -13,11 +13,11 @@
 
     <!-- STEP 3 -->
     <string name="registration_complete">Registration is completed!\n</string>
-    <string name="your_name">Your name is: %s \n</string>
-    <string name="your_surname">Your surname is: %s \n</string>
-    <string name="your_email">Your email is: %s \n</string>
-    <string name="your_username">Your username is: %s \n</string>
-    <string name="your_password">Your password is: %s \n</string>
+    <string name="your_name">Your name is: \n</string>
+    <string name="your_surname">Your surname is: \n</string>
+    <string name="your_email">Your email is: \n</string>
+    <string name="your_username">Your username is: \n</string>
+    <string name="your_password">Your password is:  \n</string>
 
     <!-- BUTTON -->
     <string name="confirm">Confirm</string>

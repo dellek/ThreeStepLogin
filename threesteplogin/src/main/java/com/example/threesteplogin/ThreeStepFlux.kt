@@ -12,7 +12,7 @@ open class ThreeStepFlux : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.navigator_host)
+        setContentView(R.layout.three_step_flux)
         nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
         graph.startDestination = R.id.step1Fragment
