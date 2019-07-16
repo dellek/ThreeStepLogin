@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">ThreeStepLogin</string>
+
+    <!-- STEP 1 -->
+    <string name="name">Enter your name</string>
+    <string name="surname">Enter your surname</string>
+    <string name="email">Enter your email</string>
+
+    <!-- STEP 2 -->
+    <string name="username">Choose your username</string>
+    <string name="password">Choose a password</string>
+
+    <!-- STEP 3 -->
+    <string name="registration_complete">Registration is completed!\n</string>
+    <string name="your_name">Your name is: %s \n</string>
+    <string name="your_surname">Your surname is: %s \n</string>
+    <string name="your_email">Your email is: %s \n</string>
+    <string name="your_username">Your username is: %s \n</string>
+    <string name="your_password">Your password is: %s \n</string>
+
+    <!-- BUTTON -->
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="undo">Undo</string>
+
+</resources>

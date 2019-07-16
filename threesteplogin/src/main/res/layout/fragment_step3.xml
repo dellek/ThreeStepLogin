@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_registration_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="176dp"
+            android:text="@string/registration_complete"
+            app:layout_constraintBottom_toTopOf="@+id/tv_your_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv_your_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/your_name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_your_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_your_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/your_surname"
+        app:layout_constraintBottom_toTopOf="@+id/tv_your_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_your_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/your_email"
+        app:layout_constraintBottom_toTopOf="@+id/tv_your_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_your_username"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/your_username"
+        app:layout_constraintBottom_toTopOf="@+id/tv_your_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_your_password"
+        android:layout_width="147dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="104dp"
+        android:text="@string/your_password"
+        app:layout_constraintBottom_toTopOf="@+id/btn_confirm_step3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_confirm_step3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#43A047"
+        android:text="@string/confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <Button
+        android:id="@+id/btn_undo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D50000"
+        android:text="@string/undo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirm_step3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"/>
+</android.support.constraint.ConstraintLayout>
