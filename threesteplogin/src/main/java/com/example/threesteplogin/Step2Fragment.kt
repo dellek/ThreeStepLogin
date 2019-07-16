@@ -29,10 +29,9 @@ class Step2Fragment : Fragment() {
         etUsername = view.findViewById(R.id.et_username)
         etPassword = view.findViewById(R.id.et_password)
         btnCancelStep2 = view.findViewById(R.id.btn_cancel_step2)
-        bundle = Bundle()
+        bundle = arguments!!
 
         if(bundle.getBoolean("step2")){
-            bundle = arguments!!
             etUsername.setText(bundle.getString("username"))
             etPassword.setText(bundle.getString("password"))
         }
@@ -42,8 +41,9 @@ class Step2Fragment : Fragment() {
                 etUsername.setText("")
                 etPassword.setText("")
             }
-            Navigation.findNavController(it).navigate(R.id.action_step2_to_step1)
+            Navigation.findNavController(it).navigate(R.id.action_step2_to_step1,bundle)
         }
+
         btnConfirmStep2 = view.findViewById(R.id.btn_confirm_step2)
         btnConfirmStep2.setOnClickListener{
             if(etUsername.text.equals("") && etPassword.text.equals("")){
