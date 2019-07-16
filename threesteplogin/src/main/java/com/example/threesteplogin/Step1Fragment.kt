@@ -36,10 +36,11 @@ class Step1Fragment : Fragment() {
             etSurname.setText(bundle.getString("surname"))
             etEmail.setText(bundle.getString("email"))
         }
-        if(etName.text.equals("") && etSurname.text.equals("") && etEmail.text.equals("")) {
-            Toast.makeText(context, "I campi sono obbligatori", Toast.LENGTH_SHORT).show()
-        }else{
+
         btnConfirmStep1.setOnClickListener{
+            if(etName.text.toString() == "" && etSurname.text.toString() == "" && etEmail.text.toString() == "") {
+                Toast.makeText(context, "I campi sono obbligatori", Toast.LENGTH_SHORT).show()
+            }else{
                 bundleInstantiated = true
                 bundle.putString("name",etName.text.toString())
                 bundle.putString("surname",etSurname.text.toString())

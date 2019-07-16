@@ -38,7 +38,7 @@ class Step2Fragment : Fragment() {
         }
 
         btnCancelStep2.setOnClickListener{
-            if(!etUsername.text.equals("") && !etPassword.text.equals("")){
+            if(etUsername.text.toString() != "" && etPassword.text.toString() != ""){
                 etUsername.setText("")
                 etPassword.setText("")
             }
@@ -46,10 +46,11 @@ class Step2Fragment : Fragment() {
         }
 
         btnConfirmStep2 = view.findViewById(R.id.btn_confirm_step2)
-        if(etUsername.text.equals("") && etPassword.text.equals("")){
-            Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
-        }else{
+
         btnConfirmStep2.setOnClickListener{
+            if(etUsername.text.toString() == "" && etPassword.text.toString() == ""){
+                Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
+            }else{
                 bundle2Instantiated = true
                 arguments?.putString("username",etUsername.text.toString())
                 arguments?.putString("password",etPassword.text.toString())
