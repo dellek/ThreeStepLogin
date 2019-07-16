@@ -41,24 +41,24 @@ class Step2Fragment : Fragment() {
             if(etUsername.text.equals("") && etPassword.text.equals("")){
                 Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
             }else{
-                onSaveInstanceState(savedInstanceState!!)
+                //onSaveInstanceState(savedInstanceState!!)
                 Navigation.findNavController(it).navigate(R.id.action_step2_to_step3,savedInstanceState)
             }
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putBoolean("step2",true)
-        outState.putString("username",etUsername.text.toString())
-        outState.putString("password",etPassword.text.toString())
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        if(savedInstanceState!!.getBoolean("step2")){
-            etUsername.setText(savedInstanceState.getString("username"))
-            etPassword.setText(savedInstanceState.getString("password"))
-        }
-    }
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.putBoolean("step2",true)
+//        outState.putString("username",etUsername.text.toString())
+//        outState.putString("password",etPassword.text.toString())
+//    }
+//
+//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+//        super.onViewStateRestored(savedInstanceState)
+//        if(savedInstanceState!!.getBoolean("step2")){
+//            etUsername.setText(savedInstanceState.getString("username"))
+//            etPassword.setText(savedInstanceState.getString("password"))
+//        }
+//    }
 }

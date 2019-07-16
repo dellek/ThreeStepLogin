@@ -31,26 +31,26 @@ class Step1Fragment : Fragment() {
             if(etName.equals("") && etSurname.equals("") && etEmail.equals("")){
                 Toast.makeText(context,"I campi sono obbligatori",Toast.LENGTH_SHORT).show()
             }else{
-                onSaveInstanceState(savedInstanceState!!)
+                //onSaveInstanceState(savedInstanceState!!)
                 Navigation.findNavController(it).navigate(R.id.action_step1_to_step2,savedInstanceState)
             }
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putBoolean("step1",true)
-        outState.putString("name",etName.text.toString())
-        outState.putString("surname",etSurname.text.toString())
-        outState.putString("email",etEmail.text.toString())
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        if(savedInstanceState!!.getBoolean("step1")){
-            etName.setText(savedInstanceState.getString("name"))
-            etSurname.setText(savedInstanceState.getString("surname"))
-            etEmail.setText(savedInstanceState.getString("email"))
-        }
-    }
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.putBoolean("step1",true)
+//        outState.putString("name",etName.text.toString())
+//        outState.putString("surname",etSurname.text.toString())
+//        outState.putString("email",etEmail.text.toString())
+//    }
+//
+//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+//        super.onViewStateRestored(savedInstanceState)
+//        if(savedInstanceState!!.getBoolean("step1")){
+//            etName.setText(savedInstanceState.getString("name"))
+//            etSurname.setText(savedInstanceState.getString("surname"))
+//            etEmail.setText(savedInstanceState.getString("email"))
+//        }
+//    }
 }

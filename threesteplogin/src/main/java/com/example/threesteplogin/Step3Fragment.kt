@@ -40,12 +40,12 @@ class Step3Fragment : Fragment() {
         }
     }
 
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        tvYourName.text = savedInstanceState!!.getString("name")
-        tvYourPassword.text = savedInstanceState!!.getString("surname")
-        tvYourEmail.text = savedInstanceState!!.getString("email")
-        tvYourUsername.text = savedInstanceState!!.getString("username")
-        tvYourPassword.text = savedInstanceState!!.getString("password")
-    }
+//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+//        super.onViewStateRestored(savedInstanceState)
+//        tvYourName.text = savedInstanceState!!.getString("name")
+//        tvYourPassword.text = savedInstanceState!!.getString("surname")
+//        tvYourEmail.text = savedInstanceState!!.getString("email")
+//        tvYourUsername.text = savedInstanceState!!.getString("username")
+//        tvYourPassword.text = savedInstanceState!!.getString("password")
+//    }
 }
