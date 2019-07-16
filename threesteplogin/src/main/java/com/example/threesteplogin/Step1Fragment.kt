@@ -32,9 +32,9 @@ class Step1Fragment : Fragment() {
         btnConfirmStep1 = view.findViewById(R.id.btn_confirm_step1)
         val bundle = Bundle()
         if(bundleInstantiated) {
-            etName.setText(bundle.getString("name"))
-            etSurname.setText(bundle.getString("surname"))
-            etEmail.setText(bundle.getString("email"))
+            etName.setText(arguments?.getString("name"))
+            etSurname.setText(arguments?.getString("surname"))
+            etEmail.setText(arguments?.getString("email"))
         }
 
         btnConfirmStep1.setOnClickListener{
