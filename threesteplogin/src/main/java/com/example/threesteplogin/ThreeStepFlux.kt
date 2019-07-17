@@ -2,6 +2,7 @@ package com.example.threesteplogin
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 
@@ -32,6 +33,7 @@ open class ThreeStepFlux : AppCompatActivity(){
         nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
         graph.startDestination = R.id.step1Fragment
+        Toast.makeText(this,"Sono la libreria",Toast.LENGTH_SHORT).show()
     }
 
     override fun onBackPressed() {}
