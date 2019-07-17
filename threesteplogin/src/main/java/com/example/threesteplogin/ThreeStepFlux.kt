@@ -51,20 +51,20 @@ open class ThreeStepFlux : AppCompatActivity(){
 
     override fun onBackPressed() {}
 
-    fun changeLayoutAppearence(){
-        AlertDialog.Builder(this)
+    fun changeLayoutAppearence(context: Context){
+        AlertDialog.Builder(context)
             .setTitle("Choose layout appearence")
             .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
             .setPositiveButton(R.string.proceed) { _, _ ->
-                changeBackground()
+                changeBackground(context)
             }
             .setNegativeButton(R.string.cancel,null)
             .setIcon(android.R.drawable.ic_dialog_alert)
             .show()
     }
 
-    private fun changeBackground(){
-        AlertDialog.Builder(this)
+    private fun changeBackground(context: Context){
+        AlertDialog.Builder(context)
             .setTitle("Background")
             .setMessage("Choose a color for background")
             .setSingleChoiceItems(arrayOf("red","green","blue"),-1){ _,item->
