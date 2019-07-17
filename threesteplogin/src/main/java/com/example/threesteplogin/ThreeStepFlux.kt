@@ -31,17 +31,15 @@ open class ThreeStepFlux : AppCompatActivity(){
     private lateinit var graph:NavGraph
     private lateinit var threeStepLayout:ConstraintLayout
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onBackPressed() {}
+
+    fun initFlux(){
         setContentView(R.layout.three_step_flux)
         nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
         threeStepLayout = findViewById(R.id.three_step_layout)
         graph.startDestination = R.id.step1Fragment
-        //Toast.makeText(this,"Sono la libreria",Toast.LENGTH_SHORT).show()
     }
-
-    override fun onBackPressed() {}
 
     fun changeLayoutAppearence(){
         AlertDialog.Builder(this)
