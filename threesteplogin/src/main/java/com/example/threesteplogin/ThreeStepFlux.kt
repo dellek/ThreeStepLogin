@@ -30,61 +30,58 @@ import java.sql.RowId
  * ------ enjoy ------
  */
 
-open class ThreeStepFlux : AppCompatActivity(){
+open class ThreeStepFlux {
 
-    private lateinit var nav:NavHostFragment
-    private lateinit var graph:NavGraph
-    private lateinit var threeStepLayout:ConstraintLayout
 
-    interface LayoutCustomization{
+    fun initFlux(context: Context){
 
-        fun changeLayoutBackground(threeStepFlux: ThreeStepFlux)
+        Step1Fragment()
+        Step2Fragment()
+        Step3Fragment()
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.three_step_flux)
-        nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
-        threeStepLayout = findViewById(R.id.three_step_layout)
-        graph.startDestination = R.id.step1Fragment
-    }
+//    private lateinit var nav:NavHostFragment
+//    private lateinit var graph:NavGraph
+//    private lateinit var threeStepLayout:ConstraintLayout
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.three_step_flux)
+//        nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
+//        graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
+//        threeStepLayout = findViewById(R.id.three_step_layout)
+//        graph.startDestination = R.id.step1Fragment
+//    }
 
-    override fun onBackPressed() {}
-
-    fun initFlux(savedInstanceState: Bundle?){
-        this.onCreate(savedInstanceState)
-    }
-
-    fun changeLayoutAppearence(context: Context){
-        Toast.makeText(context,"Sono dentro la libreria",Toast.LENGTH_SHORT).show()
-        AlertDialog.Builder(context)
-            .setTitle("Choose layout appearence")
-            .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
-            .setPositiveButton(R.string.proceed) { _, _ ->
-                changeBackground(context)
-            }
-            .setNegativeButton(R.string.cancel,null)
-            .setIcon(android.R.drawable.ic_dialog_alert)
-            .show()
-    }
-
-    private fun changeBackground(context: Context){
-        AlertDialog.Builder(context)
-            .setTitle("Background")
-            .setMessage("Choose a color for background")
-            .setSingleChoiceItems(arrayOf("red","green","blue"),-1){ _,item->
-                when(item){
-                    0 -> threeStepLayout.setBackgroundColor(Color.RED)
-                    1 -> threeStepLayout.setBackgroundColor(Color.GREEN)
-                    2 -> threeStepLayout.setBackgroundColor(Color.BLUE)
-                }
-            }
-            .setPositiveButton(android.R.string.yes,null)
-            .setNegativeButton(android.R.string.no){_,_->
-                threeStepLayout.setBackgroundColor(Color.WHITE)
-            }
-            .setIcon(android.R.drawable.ic_dialog_alert)
-            .show()
-    }
+//    fun changeLayoutAppearence(context: Context){
+//        Toast.makeText(context,"Sono dentro la libreria",Toast.LENGTH_SHORT).show()
+//        AlertDialog.Builder(context)
+//            .setTitle("Choose layout appearence")
+//            .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
+//            .setPositiveButton(R.string.proceed) { _, _ ->
+//                changeBackground(context)
+//            }
+//            .setNegativeButton(R.string.cancel,null)
+//            .setIcon(android.R.drawable.ic_dialog_alert)
+//            .show()
+//    }
+//
+//    private fun changeBackground(context: Context){
+//        AlertDialog.Builder(context)
+//            .setTitle("Background")
+//            .setMessage("Choose a color for background")
+//            .setSingleChoiceItems(arrayOf("red","green","blue"),-1){ _,item->
+//                when(item){
+//                    0 -> threeStepLayout.setBackgroundColor(Color.RED)
+//                    1 -> threeStepLayout.setBackgroundColor(Color.GREEN)
+//                    2 -> threeStepLayout.setBackgroundColor(Color.BLUE)
+//                }
+//            }
+//            .setPositiveButton(android.R.string.yes,null)
+//            .setNegativeButton(android.R.string.no){_,_->
+//                threeStepLayout.setBackgroundColor(Color.WHITE)
+//            }
+//            .setIcon(android.R.drawable.ic_dialog_alert)
+//            .show()
+//    }
 }
