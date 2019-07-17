@@ -1,10 +1,13 @@
 package com.example.threesteplogin
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.view.ContextMenu
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
@@ -34,7 +37,7 @@ open class ThreeStepFlux : AppCompatActivity(){
 
     interface LayoutCustomization{
 
-        fun changeLayoutBackground(threeStepLayout: ConstraintLayout)
+        fun changeLayoutBackground(threeStepFlux: ThreeStepFlux)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,34 +51,34 @@ open class ThreeStepFlux : AppCompatActivity(){
 
     override fun onBackPressed() {}
 
-//    fun changeLayoutAppearence(){
-//        AlertDialog.Builder(this)
-//            .setTitle("Choose layout appearence")
-//            .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
-//            .setPositiveButton(R.string.proceed) { _, _ ->
-//                changeBackground()
-//            }
-//            .setNegativeButton(R.string.cancel,null)
-//            .setIcon(android.R.drawable.ic_dialog_alert)
-//            .show()
-//    }
-//
-//    private fun changeBackground(){
-//        AlertDialog.Builder(this)
-//            .setTitle("Background")
-//            .setMessage("Choose a color for background")
-//            .setSingleChoiceItems(arrayOf("red","green","blue"),-1){ _,item->
-//                when(item){
-//                    0 -> threeStepLayout.setBackgroundColor(Color.RED)
-//                    1 -> threeStepLayout.setBackgroundColor(Color.GREEN)
-//                    2 -> threeStepLayout.setBackgroundColor(Color.BLUE)
-//                }
-//            }
-//            .setPositiveButton(android.R.string.yes,null)
-//            .setNegativeButton(android.R.string.no){_,_->
-//                threeStepLayout.setBackgroundColor(Color.WHITE)
-//            }
-//            .setIcon(android.R.drawable.ic_dialog_alert)
-//            .show()
-//    }
+    fun changeLayoutAppearence(){
+        AlertDialog.Builder(this)
+            .setTitle("Choose layout appearence")
+            .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
+            .setPositiveButton(R.string.proceed) { _, _ ->
+                changeBackground()
+            }
+            .setNegativeButton(R.string.cancel,null)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .show()
+    }
+
+    private fun changeBackground(){
+        AlertDialog.Builder(this)
+            .setTitle("Background")
+            .setMessage("Choose a color for background")
+            .setSingleChoiceItems(arrayOf("red","green","blue"),-1){ _,item->
+                when(item){
+                    0 -> threeStepLayout.setBackgroundColor(Color.RED)
+                    1 -> threeStepLayout.setBackgroundColor(Color.GREEN)
+                    2 -> threeStepLayout.setBackgroundColor(Color.BLUE)
+                }
+            }
+            .setPositiveButton(android.R.string.yes,null)
+            .setNegativeButton(android.R.string.no){_,_->
+                threeStepLayout.setBackgroundColor(Color.WHITE)
+            }
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .show()
+    }
 }
