@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.ContextMenu
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
@@ -50,6 +51,10 @@ open class ThreeStepFlux : AppCompatActivity(){
     }
 
     override fun onBackPressed() {}
+
+    fun initFlux(savedInstanceState: Bundle?){
+        this.onCreate(savedInstanceState)
+    }
 
     fun changeLayoutAppearence(context: Context){
         Toast.makeText(context,"Sono dentro la libreria",Toast.LENGTH_SHORT).show()
