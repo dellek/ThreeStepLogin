@@ -65,4 +65,8 @@ class Step2Fragment : Fragment() {
             }
         }
     }
+
+    fun getStep2Fragment():Step2Fragment{
+        return this
+    }
 }

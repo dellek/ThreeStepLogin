@@ -59,4 +59,8 @@ class Step1Fragment : Fragment() {
             }
         }
     }
+
+    fun getStep1Fragment(): Step1Fragment {
+        return this
+    }
 }

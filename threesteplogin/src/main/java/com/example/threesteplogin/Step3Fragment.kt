@@ -53,4 +53,8 @@ class Step3Fragment : Fragment() {
             Toast.makeText(context,"Evviva!!Hai completato i 3 step",Toast.LENGTH_SHORT).show()
         }
     }
+
+    fun getStep3Fragment():Step3Fragment{
+        return this
+    }
 }

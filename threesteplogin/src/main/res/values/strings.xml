@@ -25,4 +25,7 @@
     <string name="cancel">Cancel</string>
     <string name="undo">Undo</string>
 
+    <!-- ALERT DIALOG -->
+    <string name="proceed">Proceed</string>
+
 </resources>
