@@ -35,16 +35,13 @@ open class ThreeStepFlux : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.three_step_flux)
-    }
-
-    override fun onBackPressed() {}
-
-    fun initFlux(){
         nav = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         graph = nav.navController.navInflater.inflate(R.navigation.nav_graph)
         threeStepLayout = findViewById(R.id.three_step_layout)
         graph.startDestination = R.id.step1Fragment
     }
+
+    override fun onBackPressed() {}
 
     fun changeLayoutAppearence(){
         AlertDialog.Builder(this)
