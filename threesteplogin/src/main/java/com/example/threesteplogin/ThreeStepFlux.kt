@@ -52,6 +52,7 @@ open class ThreeStepFlux : AppCompatActivity(){
     override fun onBackPressed() {}
 
     fun changeLayoutAppearence(context: Context){
+        Toast.makeText(context,"Sono dentro la libreria",Toast.LENGTH_SHORT).show()
         AlertDialog.Builder(context)
             .setTitle("Choose layout appearence")
             .setMessage("You can choose once and changes cannot be undone.Cancel load default layout")
