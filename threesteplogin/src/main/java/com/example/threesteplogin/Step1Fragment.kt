@@ -62,6 +62,6 @@ class Step1Fragment : Fragment() {
     }
 
     fun getStep1Layout(): Int{
-        return R.id.step1_constraint
+        return R.layout.fragment_step1
     }
 }
