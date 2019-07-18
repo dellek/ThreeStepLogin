@@ -1,6 +1,7 @@
 package com.example.threesteplogin
 
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -60,7 +61,7 @@ class Step1Fragment : Fragment() {
         }
     }
 
-    fun getStep1Fragment(): Step1Fragment {
-        return this
+    fun getStep1Layout(): Int{
+        return R.id.step1_constraint
     }
 }
